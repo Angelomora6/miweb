@@ -1,12 +1,11 @@
 $primary: #ff7f00; 
 $black2: #495057; 
 
-@import url(bootstrap/bootstrap.scss);                                                                                    
+@import "bootstrap/bootstrap.scss";                                                                                    
 
 body{
 	font-family: 'Montserrat', sans-serif;
 	color: $black2;
-
 }
 
  h1,h2,h3,h4,h5,h6{
@@ -14,14 +13,108 @@ body{
  }
 
  img{
- 	max-width: 2;
+ 	max-width: 100%;
  }
 
-a{
+a, .btn-link{
+	 g:haver{
+	 	    text-decoration: none;
+    }	    
+}
 
-	&:hover{
-		text-decoration: none;
-	}
+.btn.btn.primary{
+	font-weight: 500;
+	color: #fff
+}
+ .section.title{
+     font-size: 20px;
+     text-align: center;
+     padding: 15px o 30px;
+     position: relative;
+
+     &::after{
+     	content: "";
+     	position: absolute;
+     	display: block;
+     	width: 40px; 
+     	height: 3px;
+     	background: $primary;
+     	bottom: 15px; 
+     	left: 50px;
+     	transform: translateX(50%);
+     	border-radius: 4px; 
+
+     }
+ }
+
+// Header
+
+Header{
+   background: #fff;
+   padding: 10px 0;
+   box-shadow: 0 5px rgba(204,204,204,0.31);
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 10;
+
+   h1{
+   	font-size: 24px;
+   	font-weight: 600;
+   	text-transform: uppercase;
+   }
+
+   .avatar-container{
+   	width: 60px;
+   	height: 60px;
+   	position: relative;
+   	cursor: pointer;
+
+   	img{
+   		 width: 100%;
+   		 height: 100%;
+   		 object-fit: cover;
+   		 object-position: center;
+   		 background-origin: 50%;
+   	}
+
+      i{
+      	position: absolute;
+      	left: 0;
+      	top: 0;
+      	font-size: 20px;
+      	color: $primary;
+       }
+   }
+
+
+   .profile-options-modal{
+   	.profile-options-list{
+   		padding: 0;
+   		margin: 0;
+   		list-style: none;
+   	}
+   }
 
 }
 
+//main
+
+.main{
+	padding-top: 80px;
+}
+.search.container{
+	padding-top: 30px;
+
+	input{
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+		border: 1px solid #ccc;
+		font-size: 14px;
+		padding: 8px 10px;
+		border-radius: 4px;
+
+	} 
+}
